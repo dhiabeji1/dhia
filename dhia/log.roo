@@ -1,0 +1,213 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-02-15 12:30:36
+project --topLevelPackage dhia.com --projectName dhia --java 6 --packaging WAR
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-02-15 12:30:46
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-02-15 12:30:50
+mongo setup --databaseName dhia
+entity mongo --class ~.domain.Users --testAutomatically 
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-02-15 12:34:44
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-02-15 12:39:06
+// [failed] entity mongo --class ~.domain.Users --testAutomatically 
+field string --fieldName userName --notNull --sizeMin 4 --sizeMax 12
+field string --fieldName password --notNull --sizeMin 6 --sizeMax 20
+field string --fieldName firstName --notNull 
+field string --fieldName lastName --notNull 
+repository mongo --interface ~.repositories.UserRepository --entity ~.domain.Users
+service type --interface ~.serviceUsers --entity ~.domain.Users
+web mvc setup
+web mvc controller --class ~.TestController
+web mvc scaffold --class ~.web.UserController --backingType ~.domain.Users
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-02-15 13:41:37
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-02-15 19:07:28
+entity mongo --class ~.domain.useParrticulier --testAutomatically 
+entity mongo --class ~.domain.adress_user --testAutomatically 
+entity mongo --class ~.domain.login --testAutomatically 
+entity mongo --class ~.domain.session --testAutomatically 
+entity mongo --class ~.domain.old_login --testAutomatically 
+entity mongo --class ~.domain.user --testAutomatically 
+entity mongo --class ~.domain.calendrier_RDV --testAutomatically 
+entity mongo --class ~.domain.RDV --testAutomatically 
+entity mongo --class ~.domain.user_detail --testAutomatically 
+entity mongo --class ~.domain.user_even --testAutomatically 
+entity mongo --class ~.domain.doc_user --testAutomatically 
+entity mongo --class ~.domain.particulier --testAutomatically 
+entity mongo --class ~.domain.adress_particulier --testAutomatically 
+entity mongo --class ~.domain.office --testAutomatically 
+entity mongo --class ~.domain.departement --testAutomatically 
+entity mongo --class ~.domain.maps --testAutomatically 
+entity mongo --class ~.domain.metier --testAutomatically 
+entity mongo --class ~.domain.metier_detail --testAutomatically 
+entity mongo --class ~.domain.event_detail --testAutomatically 
+entity mongo --class ~.domain.categorie_metier --testAutomatically 
+focus --class ~.domain.Users
+// [failed] field string --fieldName firstName --notNull --sizeMin 2 --sizeMax  10
+field date --fieldName birthDate --type java.util.Calendar --notNull true
+// [failed] field date --fieldName birthDate --type java.util.Calendar --notNull true
+enum type --class ~.domain.Users.gender
+enum constant --name MALE
+enum constant --name FEMALE
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-02-15 23:07:19
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-02-15 23:15:07
+focus --class ~.domain.Users
+field enum --fieldName gender --type ~.domain.Users.gender
+field string --fieldName u_job --notNull --sizeMin 2 --sizeMax  10
+enum type --class ~.domain.Users.nationality
+enum constant --name tunisienne
+enum constant --name francaise
+enum constant --name allemande 
+enum constant --name italienne 
+focus --class ~.domain.Users
+field enum --fieldName nationality --type ~.domain.Users.Nationality
+field string --fieldName u_personal_phone --notNull --sizeMin 8 --sizeMax  20
+field string --fieldName u_phone --notNull --sizeMin 8 --sizeMax  20
+// [failed] field date --fieldName birthDate --type java.util.Calendar --notNull true
+field date --fieldName created_at  --type java.util.Calendar --notNull true
+field file --fieldName photo --contentType GIF 
+field file --fieldName photo --contentType PNG 
+field file --fieldName photo --contentType GIF 
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-02-16 02:05:10
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-02-16 09:00:41
+focus --class ~.domain.adress_user
+field string --fieldName u_adress --notNull 
+field string --fieldName u_adress2 --notNull 
+field string --fieldName u_adress2 
+field enum --fieldName nationality --type ~.domain.users.Nationality
+field string --fieldName city --notNull 
+field string --fieldName country --notNull 
+focus --class ~.domain.user_detail
+field number --fieldName weight --type java.math.BigDecimal 
+ enum type --class ~.domain.blood_type 
+enum constant --name "O_"
+enum constant --name "AB_"
+enum constant --name "A_"
+enum constant --name "B_"
+focus --class ~.domain.user_detail
+ enum type --class ~.domain.eyes
+enum constant --name brown
+enum constant --name honey
+enum constant --name green
+enum constant --name hazel
+enum constant --name lt_blue
+enum constant --name dk_blue
+enum constant --name amethist
+enum constant --name gray
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-02-16 16:22:38
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-02-16 18:24:01
+focus --class ~.domain.user_detail
+field enum --fieldName  nationality --type ~.domain.Nationality
+field enum --fieldName  nationality --type ~.domain.users.Nationality
+ enum type --class ~.domain.religion
+enum constant --name islam
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-02-16 22:43:03
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-02-16 22:49:20
+ enum type --class ~.domain.religion
+enum constant --name islam
+enum constant --name christian 
+enum constant --name jewish
+// [failed] enum constant --name christian 
+focus --class ~.domain.user_detail
+field enum --fieldName religion --type ~.domain.Religion
+field string --fieldName u_comment
+field string --fieldName u_injury 
+focus --class ~.domain.user_detail
+field enum --fieldName color --type ~.domain.eyes
+field enum --fieldName u_eyes_color --type ~.domain.eyes
+// [failed] field enum --fieldName u_eyes_color --type ~.domain.eyes
+field string --fieldName blood_type --notNull 
+field string --fieldName skin_color --notNull 
+field string --fieldName u_hair_color --notNull 
+// [failed] field string --fieldName u_hair_color --notNull 
+field string --fieldName skin_color --notNull 
+field string --fieldName u_skin_color --notNull 
+field string --fieldName u_relation --notNull 
+field string --fieldName u_race --notNull 
+field string --fieldName u_status --notNull 
+focus --class ~.domain.login
+field string --fieldName username --notNull --sizeMin 5 --sizeMax 20
+field string --fieldName password --notNull --sizeMin 5 --sizeMax 20
+focus --class ~.domain.session
+focus --class ~.domain.old_login
+field string --fieldName lastpassword --notNull --sizeMin 5 --sizeMax 20
+focus --class ~.domain.departement
+focus --class ~.domain.departement
+field string --fieldName dept_name --notNull --sizeMin 5 --sizeMax 20
+field string --fieldName dept_loc --notNull --sizeMin 5 --sizeMax 20
+focus --class ~.domain.office
+field string --fieldName o_name --notNull --sizeMin 5 --sizeMax 20
+field number --fieldName o_number --type java.lang.Number
+field string --fieldName o_loc --notNull --sizeMin 5 --sizeMax 20
+focus --class ~.domain.metier_detail
+field string --fieldName m_description --notNull --sizeMin 5 --sizeMax 20
+field string --fieldName m_fulldesc --notNull 
+field string --fieldName m_service --notNull 
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-02-17 13:07:16
+focus --class ~.domain.categorie_metier
+field string --fieldName name --notNull --sizeMin 5 --sizeMax 20
+focus --class ~.domain.metier 
+field string --fieldName m_name --notNull --sizeMin 5 --sizeMax 20
+// [failed] field string --fieldName m_name --notNull --sizeMin 0 --sizeMax 40
+field string --fieldName m_shortDesc --notNull --sizeMin 0 --sizeMax 40
+field string --fieldName m_longDesc --notNull --sizeMin 0 --sizeMax 100
+focus --class ~.domain.event_detail
+// [failed] focus --class ~.domain.event
+// [failed] focus --class ~.domain.even
+// [failed] field string --fieldName ev_name --notNull --sizeMin 5 --sizeMax 20
+entity mongo --class ~.domain.even_detail --testAutomatically 
+// [failed] focus --class ~.domain.even
+// [failed] field string --fieldName ev_name --notNull --sizeMin 5 --sizeMax 20
+entity mongo --class ~.domain.even --testAutomatically 
+field string --fieldName ev_name --notNull --sizeMin 5 --sizeMax 20
+field string --fieldName ev_description --notNull --sizeMin 5 --sizeMax 20
+// [failed] field string --fieldName ev_description --notNull --sizeMin 0 --sizeMax 20
+backup
+field date --fieldName ev_created_Date  --type java.util.Calendar --notNull true
+// [failed] field string --fieldName ev_description --notNull --sizeMin 0 --sizeMax 20
+focus --class ~.domain.session
+focus --class ~.domain.session
+field number --fieldName   session_key --type java.lang.Number
+field string --fieldName secret --notNull --sizeMin 0 --sizeMax 20
+field string --fieldName expiry --notNull --sizeMin 0 --sizeMax 20
+// [failed] field string --fieldName data --notNull --sizeMin 0 --sizeMax 20
+// [failed] field string --fieldName Data --notNull --sizeMin 0 --sizeMax 20
+field string --fieldName s_data --notNull --sizeMin 0 --sizeMax 20
+field string --fieldName inactive_expiry --notNull --sizeMin 0 --sizeMax 20
+focus --class ~.domain.doc_user
+focus --class ~.domain.doc_user
+field string --fieldName docname --notNull --sizeMin 0 --sizeMax 20
+field string --fieldName doc_description --notNull --sizeMin 0 --sizeMax 20
+field string --fieldName doc_full_description  --notNull --sizeMin 0 --sizeMax 20
+field date --fieldName  doc_createdDate --type java.util.Calendar --notNull true
+focus --class ~.domain.particulier
+field string --fieldName  name --notNull --sizeMin 5 --sizeMax 20
+field date --fieldName  p_birthday --type java.util.Calendar --notNull true
+field enum --fieldName gender --type ~.domain.users.gender
+field string --fieldName p_metier
+// [failed] field string --fieldName p_metier --sizeMin 2
+field string --fieldName p_metier --sizeMin 2
+field string --fieldName  p_personal_phone --notNull --sizeMin 3 --sizeMax 20
+field string --fieldName  p_office_phone --notNull --sizeMin 3 --sizeMax 20
+field date --fieldName  p_birthday --type java.util.Calendar --notNull true
+focus --class ~.domain.adress_particulier
+field string --fieldName  p_adress1 --notNull --sizeMin 3 --sizeMax 20
+field string --fieldName  p_adress2 --notNull --sizeMin 3 --sizeMax 20
+field number --fieldName p_zipcode --type java.lang.Long
+field string --fieldName  p_city --notNull --sizeMin 3 --sizeMax 20
+field string --fieldName  p_country --notNull --sizeMin 3 --sizeMax 20
+focus --class ~.domain.adress_user 
+field number --fieldName p_zipcode --type java.lang.Long
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-02-18 00:54:53
+focus --class ~.domain.office
+field string --fieldName  of_number --notNull --sizeMin 3 --sizeMax 20
+focus --class ~.domain.RDV
+field number --fieldName time_unit --type int
+field date --fieldName hour_deb --type java.util.Time
+field date --fieldName hour_deb --type java.util.Date
+focus --class ~.domain.users
+field date --fieldName hour_deb --type java.util.Date
+focus --class ~.domain.RDV
+// [failed] field number --fieldName hour_deb  --type int
+field number --fieldName hour_fin  --type int
+entity mongo --class ~.domain.seance --testAutomatically 
+field number --fieldName hour_deb  --type int
+field number --fieldName hour_fin  --type int
+field number --fieldName si  --type int
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-02-18 02:47:27

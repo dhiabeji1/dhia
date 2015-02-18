@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_dhia_com_domain_Users" items="${userses}" z="/0tsXCdnXUyUiJRyndWwzJm2sEE=">
+        <table:table data="${userses}" id="l_dhia_com_domain_Users" path="/userses" z="/PDiyNuS5254WGwRKQCpilsu5Xg=">
+            <table:column id="c_dhia_com_domain_Users_userName" property="userName" z="pIGalmgH64SG2nENHAQ+6YYiCWY="/>
+            <table:column id="c_dhia_com_domain_Users_password" property="password" z="3BO6HJGwOBRg9ncyvffPofD/WEk="/>
+            <table:column id="c_dhia_com_domain_Users_firstName" property="firstName" z="+0dZv1gxWkc5kEmH/GPnNp96GcY="/>
+            <table:column id="c_dhia_com_domain_Users_lastName" property="lastName" z="YkPRADiX2JVlgGouHAvO9lEJPPc="/>
+            <table:column calendar="true" dateTimePattern="${users_birthdate_date_format}" id="c_dhia_com_domain_Users_birthDate" property="birthDate" z="1bOJr3lNGL6txYlsJUgE8NnT/xg="/>
+            <table:column id="c_dhia_com_domain_Users_gender" property="gender" z="r1TTNMPI0et3uGv5fXNHX8k4ZHY="/>
+        </table:table>
+    </page:list>
+</div>

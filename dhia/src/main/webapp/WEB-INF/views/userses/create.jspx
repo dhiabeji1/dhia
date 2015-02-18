@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_dhia_com_domain_Users" modelAttribute="users" path="/userses" render="${empty dependencies}" z="e8TrgLk3ubkUzg2XOQav5lqp4kM=">
+        <field:input field="userName" id="c_dhia_com_domain_Users_userName" max="12" min="4" required="true" z="kTnpZBp/dynTiYYIsJhg32ahRN8="/>
+        <field:input field="password" id="c_dhia_com_domain_Users_password" max="20" min="6" required="true" z="OlC/FazmaWrc7U5dhmp0k4KODgQ="/>
+        <field:input field="firstName" id="c_dhia_com_domain_Users_firstName" required="true" z="irL/J8/IUsXvnvTYeI8eaSUJYCk="/>
+        <field:input field="lastName" id="c_dhia_com_domain_Users_lastName" required="true" z="XABA/qJtUcruv9fuseqNTfZYYXA="/>
+        <field:input field="id" id="c_dhia_com_domain_Users_id" required="true" validationMessageCode="field_invalid_integer" z="37N/XpaiSMIO9Dyb2OorKWo4Mlw="/>
+        <field:select field="gender" id="c_dhia_com_domain_Users_gender" items="${genders}" path="genders" z="2uqvYF/w2CpaXuubmB5n+KkSWuA="/>
+        <field:input field="u_job" id="c_dhia_com_domain_Users_u_job" max="10" min="2" required="true" z="DYY+dHK49aOlGMFiTY1XnM48sCk="/>
+        <field:select field="nationality" id="c_dhia_com_domain_Users_nationality" items="${nationalitys}" path="nationalitys" z="akUvU5mogFarPTX9/97V/sUgsPc="/>
+        <field:input field="u_personal_phone" id="c_dhia_com_domain_Users_u_personal_phone" max="20" min="8" required="true" z="GjYRE26BjykLXkehOkPt8j/QKsI="/>
+        <field:input field="u_phone" id="c_dhia_com_domain_Users_u_phone" max="20" min="8" required="true" z="5dLoimW0lio6q1vSxXNYb8lBmps="/>
+        <field:datetime dateTimePattern="${users_created_at_date_format}" field="created_at" id="c_dhia_com_domain_Users_created_at" required="true" z="geXs5u/TJptJriluJttIQwFCkMA="/>
+        <field:datetime dateTimePattern="${users_birthdate_date_format}" field="birthDate" id="c_dhia_com_domain_Users_birthDate" required="true" z="LL92uC72MQGkU61+wlzWKLFS4fM="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_dhia_com_domain_Users" render="${not empty dependencies}" z="xXCZZo0S8aM2I9+cnXSADz8j8Ow="/>
+</div>
